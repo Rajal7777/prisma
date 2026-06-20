@@ -16,3 +16,5 @@ dev.db-journal
 dist/
 build/
 .cache/
+
+/generated/prisma
