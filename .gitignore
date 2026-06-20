@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+/.pnpm-store/
+
+# Prisma specific files
+.env
+.env.local
+.env.*.local
+dev.db
+dev.db-journal
+
+# Custom Prisma Client output (uncomment if you change the generator output path)
+# /src/generated/prisma
+
+# Build and distribution directories
+dist/
+build/
+.cache/
