@@ -18,16 +18,26 @@ app.use(express.json());
 //   res.json(users);
 // });
 
-app.put('/user', async (_, res) => {
-  const updatedUser = await prisma.user.update({
+//Update
+// app.put('/user', async (_, res) => {
+//   const updatedUser = await prisma.user.update({
+//     where: {email: "john.smith@example.com" },
+//     data: {
+//       name: "Jhon Changed",
+//       nationality: "Findland"
+//     }
+//   });
+//   res.json(updatedUser);
+// });
+
+//Delete
+app.delete('/user', async (_, res) => {
+  const deletedUser = await prisma.user.delete({
     where: {email: "john.smith@example.com" },
-    data: {
-      name: "Jhon Changed",
-      nationality: "Findland"
-    }
   });
-  res.json(updatedUser);
+  res.json(deletedUser);
 });
+
 
 const port = 4000;
 app.listen(port, () => {
