@@ -9,7 +9,11 @@ app.use(express.json());
 
 app.use('/user', async (_, res) => {
   const users = await prisma.user.findMany({
-    where: {name: "John Smith"}
+    where: {
+    nationality: {
+      in: ['German', 'Indian', 'Japanese']
+    }
+    }
  });
   res.json(users);
 });
